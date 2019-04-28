@@ -1,0 +1,109 @@
+page-post {
+    .personContainer {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+    .personPictureHolder {
+        width: 4vh;
+        height: 4vh;
+        overflow: hidden;
+        margin-left: 2vw;
+        border-radius: 50%;
+    }
+    .personPicture {
+        width: 120%;
+        height: 120%;
+        background-color: pink;
+        background-image: url('../assets/imgs/profilepic.jpg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+    }
+    .personName {
+        font-size: 2.5vmin;
+        font-family: 'Rubik';
+    }
+    .mainContainer {
+        margin: 0 auto;
+        margin-top: 3vh;
+        display: flex;
+        flex-direction: column;
+        width: 80vw;
+    }
+    .picturesSlider{
+        margin-bottom: 2vh;
+    }
+    .thumbnail {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        // background-color: red;
+        height: 10vh;
+    }
+    .picturesContainer2 {
+        margin-top:2vh;
+        height: 55vh;
+        display: flex;
+        flex-wrap: wrap;
+        .slide-zoom {
+            height: 100%;
+            width: 100%;
+            display: flex;
+        }
+    }
+    .brick {
+        border: 1px solid lightgray;
+        flex-grow: 1;
+        width: 100%;
+        height: 95%;
+        background-position: center center !important;
+        background-size: cover !important;
+    }
+    .swiper-pagination-bullets {
+        bottom: 0 !important;
+      }
+      .tools{
+          display:flex;
+          justify-content: space-around;
+          align-items: center;
+          .skip{
+            border-radius: 50%;
+            width:7vh;
+            height:7vh;
+            // color:#c11e1e;
+            background-color:white;
+            box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.7em;
+        }
+      }
+      .stylieTitle {
+        text-align: center;
+        font-weight: 800;
+        font-family: 'Gisha';
+        margin-bottom: 1vh; 
+        h3{
+            margin-top:1vmin;
+        }
+    }
+    .activePic{
+        border:1px solid rgba(0, 0, 0, 0.9);
+        filter: opacity(.5);
+
+    }
+    .choseThisButton{
+        width:100%;
+        padding: 2vh 1vmin;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        background-color:#1ec176;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+
+        color:white;
+    }
+
+}

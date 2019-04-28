@@ -1,0 +1,7 @@
+{
+  "name": "Stylie",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

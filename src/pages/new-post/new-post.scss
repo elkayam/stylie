@@ -1,0 +1,93 @@
+page-new-post {
+  .nextPrevButtonsContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    button {
+      background-color: #c11111;
+    }
+    .activated {
+      background-color: #c22525;
+    }
+  }
+  .picturesContainer {
+    height: 80vh;
+    display: flex;
+    flex-wrap: wrap;
+    // box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+    margin-bottom: 5vh;
+  }
+  .picturesContainerSlide {
+    .slide-zoom {
+      height: 100%;
+      width: 100%;
+      display: flex;
+    .removePicture {
+        bottom: -1px;
+        left: 0;
+        height: 7vh;
+        width: 10vh;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.07);
+        background-color: #fff;
+        color: #c11111;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+          0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+        position: fixed;
+        z-index: 5;
+        span {
+          font-size: 1em;
+          font-family: "Gisha";
+        }
+      }
+    .addPictures {
+        right: 0;
+        position: fixed;
+        z-index: 5;
+      }
+    }
+  }
+  .picturesContainer2 {
+    margin-top: 10vh;
+    height: 70vh;
+        display: flex;
+    flex-wrap: wrap;
+    .slide-zoom {
+      height: 100%;
+      width: 100%;
+      display: flex;
+    }
+    .brick {
+      border: 1px solid lightgray;
+      flex-grow: 1;
+      width: 100%;
+      height: 95%;
+      background-position: center center !important;
+      background-size: cover !important;
+    }
+    .uploadButton {
+      position: absolute;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      left: 50%;
+      height: 15vh;
+      width: 15vh;
+      border: 3px dashed lightgray;
+      border-radius: 3px;
+      box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.07);
+      color: lightgray;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      span {
+        font-size: 4em;
+        font-family: "Gisha";
+      }
+    }
+    .swiper-pagination-bullets {
+      bottom: 0 !important;
+    }
+  }
+}

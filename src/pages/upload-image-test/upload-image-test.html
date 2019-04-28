@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Upload
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <!-- <ion-item>
+    <ion-row>
+      <ion-col col-6>
+        <button ion-button color="danger" type="button" full round large (click)="takePhoto()">
+          <ion-icon name="camera"></ion-icon>
+        </button>
+      </ion-col>
+      <ion-col col-6>
+        <button ion-button color="secondary" type="button" full round large (click)="selectPhoto()">
+          <ion-icon name="image"></ion-icon>
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-item>
+  <ion-item *ngIf="error">
+    <strong>{{error}}</strong>
+  </ion-item>
+  <ion-item>
+    <img *ngIf="myPhoto" class="img-responsive" [src]="myPhoto"/>
+  </ion-item> -->
+  <button type="button" class="btn btn-success btn-s" style="padding:20px;" (click)="upload()">
+    <i class="glyphicon glyphicon-open-file"></i>&nbsp;Upload
+  </button>
+  <button type="button" class="btn btn-success btn-s" style="padding:20px;" (click)="takePicture()">
+      <i class="glyphicon glyphicon-open-file"></i>&nbsp;CAMERA
+    </button>
+    <button type="button" class="btn btn-success btn-s" style="padding:20px;" (click)="presentActionSheet()">
+      <i class="glyphicon glyphicon-open-file"></i>&nbsp;בדיקה
+    </button>
+    
+  <ion-slides zoom="true"  style="position: relative;" class="picturesContainer">
+    <div (click)="openGallery()" class="uploadButton">
+      <span>+</span>
+    </div>
+
+    <ion-slide *ngFor="let photo of photos; let i =index" style="display:flex; ">
+      <!-- <img src="{{photo}}" style="object-fit: cover;"  /> -->
+       <div [style.background]="'url('+photo+')'" class="brick"></div>
+
+      <div class="removePicture" (click)="removePhoto(photo,i)">
+          <span>X</span>
+        </div>
+      <!-- <span>{{i}}</span> -->
+    </ion-slide> 
+
+    <!-- <ion-slide style=" background-color:green; display:flex;">
+      <div [style.background]="'url(assets/imgs/pic1.jpg)'" class="brick"></div>
+      <div class="removePicture">
+        <span>X</span>
+      </div>
+    </ion-slide> -->
+
+
+  </ion-slides>
+</ion-content>

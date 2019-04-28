@@ -1,0 +1,93 @@
+<ion-header no-border>
+  <ion-navbar hideBackButton class="navBar">
+    <div style="background-color:transparent; color:white; flex-grow:1; display:flex; justify-content: flex-start; align-items: center; padding-right:5vw;">
+      <i class="fa fa-user fa-2x" aria-hidden="true"></i>
+    </div>
+    <div (click)="Home()" style="background-color:transparent; color:white; justify-content: center; align-items: center; flex-grow:2;">
+      <i class="fa fa-circle-o-notch fa-2x" aria-hidden="true"></i>
+    </div>
+    <div style="background-color:transparent; color:white; flex-grow:1; display:flex; justify-content: flex-end; align-items: center; padding-left:5vw;">
+      <i class="fa fa-heart-o fa-2x" aria-hidden="true"></i>
+    </div>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-slides #mainSlides class="swiper-no-swiping picturesContainer">
+    <ion-slide>
+      <h6 ion-text color="dark" style="text-align:right; padding-right:16px; font-weight:800; font-family:Rubik">פרטים</h6>
+      <div style="margin-bottom: 4.4rem;">
+        <ion-item class="padding-left-16px">
+          <ion-label floating>סוג אירוע</ion-label>
+          <ion-select [(ngModel)]="eventType" cancelText="ביטול" okText="אישור">
+            <ion-option value="typeone" checked="true">סוג אחד</ion-option>
+            <ion-option value="typetwo">סוג 2</ion-option>
+            <ion-option value="typethree">סוג 3</ion-option>
+          </ion-select>
+        </ion-item>
+        <ion-item class="padding-left-16px">
+          <ion-label floating>אירוע</ion-label>
+          <ion-select [(ngModel)]="eventDetails" cancelText="ביטול" okText="אישור">
+            <ion-option value="public" checked="true">סוג אחד</ion-option>
+            <ion-option value="friends">סוג 2</ion-option>
+            <ion-option value="private">סוג 3</ion-option>
+          </ion-select>
+        </ion-item>
+        <ion-item class="padding-left-16px">
+          <ion-label floating>פרטיות</ion-label>
+          <ion-select [(ngModel)]="postPrivacy" cancelText="ביטול" okText="אישור">
+            <ion-option value="public" checked="true">כולם</ion-option>
+            <ion-option value="friends">עוקבים בלבד</ion-option>
+            <ion-option value="private">עוקבים מאושרים</ion-option>
+          </ion-select>
+        </ion-item>
+      </div>
+      <h6 ion-text color="dark" style="text-align:right; padding-right:16px; font-weight:800; font-family:Rubik">אפשרויות</h6>
+
+      <ion-item class="padding-left-16px">
+        <ion-label>תגובות</ion-label>
+        <ion-toggle [(ngModel)]="allowComments" checked="false"></ion-toggle>
+      </ion-item>
+
+    </ion-slide>
+
+    <ion-slide class="picturesContainerSlide" style="position: relative; height:100%;">
+      <div (click)="presentActionSheet()" class="removePicture addPictures">
+        <span>
+          <ion-icon name="image"></ion-icon>
+        </span>
+      </div>
+      <div class="removePicture" (click)="removePhoto()">
+        <span>
+          <ion-icon name="close"></ion-icon>
+        </span>
+      </div>
+      <ion-slides (ionSlideDidChange)="slideChanged()" pager="true" #picturesSlides style="position: relative;" class="picturesContainer2">
+        <div (click)="presentActionSheet()" class="uploadButton">
+          <span>+</span>
+        </div>
+
+        <ion-slide *ngFor="let photo of photos; let i =index" style="display:flex; ">
+          <div [style.background]="'url('+photo+')'" class="brick"></div>
+        </ion-slide>
+
+      </ion-slides>
+    </ion-slide>
+
+    <ion-slide>
+      <input type="button" style="padding:20px;" value="uplaod" (click)="upload()">
+    </ion-slide>
+  </ion-slides>
+  <div class="nextPrevButtonsContainer">
+    <ion-buttons start>
+      <button ion-button icon-left (click)="prev()">
+        <ion-icon name="arrow-back"></ion-icon> הקודם</button>
+    </ion-buttons>
+    <ion-buttons end>
+      <button ion-button icon-right (click)="next()">המשך
+        <ion-icon name="arrow-forward"></ion-icon>
+      </button>
+    </ion-buttons>
+  </div>
+</ion-content>

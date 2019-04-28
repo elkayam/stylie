@@ -1,0 +1,50 @@
+<ion-header no-border>
+  <ion-navbar hideBackButton class="navBar">
+    <div style="background-color:transparent; color:white; flex-grow:1; display:flex; justify-content: flex-start; align-items: center; padding-right:5vw;">
+      <i class="fa fa-user fa-2x" aria-hidden="true"></i>
+    </div>
+    <div (click)="Home()" style="background-color:transparent; color:white; justify-content: center; align-items: center; flex-grow:2;">
+      <i class="fa fa-circle-o-notch fa-2x" aria-hidden="true"></i>
+    </div>
+    <div style="background-color:transparent; color:white; flex-grow:1; display:flex; justify-content: flex-end; align-items: center; padding-left:5vw;">
+      <i class="fa fa-heart-o fa-2x" aria-hidden="true"></i>
+    </div>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="personContainer">
+    <div class="personPictureHolder">
+      <div class="personPicture">
+      </div>
+    </div>
+      <div class="personName">
+        נועה כהן
+      </div>
+  </div>
+  <div class="stylieTitle">
+      <h3>אירוע משפחתי - חתונה</h3>
+  </div>
+  <div class="extraToolsContainer">
+      <div>
+<i class="fa fa-cog" aria-hidden="true"></i>
+      </div>
+      <div>
+        <i class="fa fa-search" aria-hidden="true"></i>
+      </div>
+  </div>
+  <div (click)="NavPostPage()" id="photos" class="picturesContainer" >
+    <!-- <img *ngFor="let img of urls" [src]="img" style="width:10%; height:10%;" alt="pretty kitty"/> -->
+    <div [style.background]="'url(assets/imgs/outfits/outfit1.png)'" class="brick"></div>
+    <div [style.background]="'url(assets/imgs/outfits/outfit2.png)'" class="brick"></div>
+    <!-- <div [style.background]="'url(../../assets/imgs/outfits/outfit3.jpg)'" class="brick"></div> -->
+    <!-- <div [style.background]="'url(../../assets/imgs/outfits/outfit4.jpg)'" class="brick"></div> -->
+  </div>
+
+  <div class="buttonsContainer">
+      <div class="skip">
+          <i class="fa fa-times fa-2x" aria-hidden="true"></i>
+        </div>
+  </div>
+
+</ion-content>

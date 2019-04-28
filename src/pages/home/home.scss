@@ -1,0 +1,95 @@
+page-home {
+     //Person divs
+    .personContainer {
+        margin-top: 3vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        margin-bottom: 3vh;
+    }
+    .personPictureHolder {
+        width: 8vh;
+        height: 8vh;
+        overflow: hidden;
+        margin-left: 5vw;
+        border-radius: 50%;
+    }
+    .personPicture {
+        width: 120%;
+        height: 120%;
+        background-color: pink;
+        background-image: url('../assets/imgs/profilepic.jpg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+    }
+    .personName {
+        font-size: 5vmin;
+        font-family: 'Rubik';
+    }
+    //extra tools
+    .extraToolsContainer{
+        position: fixed;
+        top:12vh;
+        left:0;
+        height:10vh;
+        width:15vw;
+        display:flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-around;
+        div{
+            background-color:#c11e1e;
+            color:white;
+            // margin:.5vmin 0;
+            // width:100%;
+            // padding: 1vmin;
+            margin: 2vmin 0;
+            width: 100%;
+            padding: 3vmin;
+            box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.07);
+            border-top-right-radius: 3px;
+            border-bottom-right-radius: 3px;
+            display:flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+    } 
+    //Stylie div
+    .stylieTitle {
+        text-align: center;
+        font-weight: 800;
+        font-family: 'Gisha';
+        margin-bottom: 4vh;
+    } //Pictures div
+    .picturesContainer {
+        height: 55vh;
+        display: flex;
+        flex-wrap: wrap;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+        margin-bottom: 3vh;
+    }
+    .brick {
+        border: 1px solid lightgray;
+        flex-grow: 1;
+        min-width: 50%;
+        background-position: center center !important;
+        background-size: cover !important;
+    }
+
+    //Buttons div
+    .buttonsContainer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .skip{
+        border-radius: 50%;
+        width:7vh;
+        height:7vh;
+        color:#c11e1e;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

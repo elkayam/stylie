@@ -1,0 +1,69 @@
+<ion-header no-border>
+  <ion-navbar hideBackButton class="navBar">
+    <div style="background-color:transparent; color:white; flex-grow:1; display:flex; justify-content: flex-start; align-items: center; padding-right:5vw;">
+      <i class="fa fa-user fa-2x" aria-hidden="true"></i>
+    </div>
+    <div (click)="Home()"  style="background-color:transparent; color:white; justify-content: center; align-items: center; flex-grow:2;">
+      <i class="fa fa-circle-o-notch fa-2x" aria-hidden="true"></i>
+    </div>
+    <div style="background-color:transparent; color:white; flex-grow:1; display:flex; justify-content: flex-end; align-items: center; padding-left:5vw;">
+      <i class="fa fa-heart-o fa-2x" aria-hidden="true"></i>
+    </div>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <div class="mainContainer">
+      <div class="personContainer">
+          <div class="personPictureHolder">
+            <div class="personPicture">
+            </div>
+          </div>
+            <div class="personName">
+              נועה כהן
+            </div>
+        </div>
+    <div class="stylieTitle">
+      <h3>אירוע משפחתי - חתונה</h3>
+    </div>
+
+    <div class="thumbnail">
+      <div (click)="changeSlide(1)" [ngClass]="isActive(1) ? 'activePic' : ''" [style.background]="'url(assets/imgs/outfits/outfit1.png)'" class="brick"></div>
+      <div (click)="changeSlide(2)" [ngClass]="isActive(2) ? 'activePic' : ''" [style.background]="'url(assets/imgs/outfits/outfit2.png)'" class="brick"></div>
+      <div (click)="changeSlide(3)" [ngClass]="isActive(3) ? 'activePic' : ''" [style.background]="'url(assets/imgs/outfits/outfit3.jpg)'" class="brick"></div>
+      <div (click)="changeSlide(4)" [ngClass]="isActive(4) ? 'activePic' : ''" [style.background]="'url(assets/imgs/outfits/outfit4.jpg)'" class="brick"></div>
+    </div>
+
+    <div class="picturesSlider">
+      <ion-slides pager="true" #picturesSlides  spaceBetween="2" style="position: relative;" class="picturesContainer2">
+        <ion-slide style="display:flex; ">
+          <div [style.background]="'url(assets/imgs/outfits/outfit1.png)'" (click)="showImage('assets/imgs/outfits/outfit1.png')" class="brick"></div>
+        </ion-slide>
+        <ion-slide style="display:flex; ">
+          <div [style.background]="'url(assets/imgs/outfits/outfit2.png)'" (click)="showImage('assets/imgs/outfits/outfit2.png')" class="brick"></div>
+        </ion-slide>
+        <ion-slide style="display:flex; ">
+          <div [style.background]="'url(assets/imgs/outfits/outfit3.jpg)'" (click)="showImage('../../assets/imgs/outfits/outfit3.jpg')"class="brick"></div>
+        </ion-slide>
+        <ion-slide style="display:flex; ">
+          <div [style.background]="'url(assets/imgs/outfits/outfit4.jpg)'" (click)="showImage('../../assets/imgs/outfits/outfit4.jpg')" class="brick"></div>
+        </ion-slide>
+      </ion-slides>
+    </div>
+
+    <div class="tools">
+      <!-- <div class="skip" style="padding-bottom:3px;">
+        <ion-icon name="thumbs-up" style="color:#00b894"></ion-icon>
+      </div>
+      <div class="skip" style="padding-top:3px;">
+        <ion-icon name="thumbs-down" style="color:#d63031"></ion-icon>
+      </div> -->
+      
+      <div class="choseThisButton">
+          הכי מתאים
+      </div>
+   
+    </div>
+  </div>
+</ion-content>
